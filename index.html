@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicGuard AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🛡️ CIVICGUARD AI</h1>
+    <p>Smart Civic Hazard Detection & Reporting System</p>
+</header>
+
+<main>
+    <section class="form-card">
+        <h2>Report a Civic Hazard</h2>
+
+        <form id="reportForm">
+
+            <label>Report Title</label>
+            <input type="text" id="title"
+                placeholder="Example: Damaged Road" required>
+
+            <label>Description</label>
+            <textarea id="description"
+                placeholder="Describe the problem..." required></textarea>
+
+            <label>Hazard Category</label>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="Road Damage">Road Damage</option>
+                <option value="Garbage">Garbage</option>
+                <option value="Water Leakage">Water Leakage</option>
+                <option value="Street Light">Street Light</option>
+                <option value="Drainage">Drainage</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label>Location</label>
+            <input type="text" id="location"
+                placeholder="Enter location" required>
+
+            <button type="submit" id="submitBtn">
+                Submit Report
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="reports-section">
+        <h2>Submitted Reports</h2>
+        <div id="reportsList">
+            Loading reports...
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 CivicGuard AI | Smart City Initiative</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
